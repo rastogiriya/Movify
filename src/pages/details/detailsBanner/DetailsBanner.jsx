@@ -24,11 +24,11 @@ const DetailsBanner = ({ video, crew }) => {
 
   return (
     <div className="detailsBanner">
+      <h1>Riyaaaaa</h1>
       {!loading ? (
         <div>Details Content...</div>
       ) : (
         <div className="detailsBannerSkeleton">
-          {/* <h1>Riyaaaaa</h1> */}
           <ContentWrapper>
             <div className="left skeleton"></div>
             <div className="right">
