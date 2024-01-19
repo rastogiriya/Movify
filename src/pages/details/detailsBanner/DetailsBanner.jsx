@@ -55,16 +55,17 @@ const DetailsBanner = ({ video, crew }) => {
                         data?.release_date
                       ).format("YYYY")})`}
                     </div>
-                  </div>
-                  <div className="subtitle">{data.tagline}</div>
+                    {/* </div> */}
+                    <div className="subtitle">{data.tagline}</div>
 
-                  <Genres data={_genres} />
+                    <Genres data={_genres} />
 
-                  <div className="row">
-                    <CircleRating rating={data.vote_average.toFixed(1)} />
-                    <div className="playbtn" onClick={() => {}}>
-                      <PlayIcon />
-                      <span className="text">Watch Trailer</span>
+                    <div className="row">
+                      <CircleRating rating={data.vote_average.toFixed(1)} />
+                      <div className="playbtn" onClick={() => {}}>
+                        <PlayIcon />
+                        <span className="text">Watch Trailer</span>
+                      </div>
                     </div>
                   </div>
                 </div>

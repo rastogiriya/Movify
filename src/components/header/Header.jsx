@@ -23,7 +23,7 @@ const Header = () => {
   }, [location]);
 
   const controlNavbar = () => {
-    console.log(window.scrollY);
+    // console.log(window.scrollY);
     if (window.scrollY > 200) {
       if (window.scrollY > lastScrollY && !mobileMenu) {
         setShow("hide");
@@ -41,7 +41,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, [setLastScrollY]);
+  }, [lastScrollY]);
 
   const searchQueryHandler = (event) => {
     if (event.key === "Enter" && query.length > 0) {
@@ -72,7 +72,7 @@ const Header = () => {
   };
 
   return (
-    <header className={`header ${mobileMenu ? "mobileView" : ""}${show}`}>
+    <header className={`header ${mobileMenu ? "mobileView" : ""} ${show}`}>
       <ContentWrapper>
         <div className="logo">
           <img src={logo} alt="" />
