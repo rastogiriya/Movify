@@ -11,7 +11,7 @@ const Details = () => {
 
   return (
     <div>
-      <h1>riyaaaaaaaaaa</h1>
+      {/* <h1>riyaaaaaaaaaa</h1> */}
       <DetailsBanner />
     </div>
   );

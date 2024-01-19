@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
-
+import { PlayIcon } from "../Playbtn.jsx";
 import "./style.scss";
 
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
@@ -11,10 +11,14 @@ import Genres from "../../../components/genres/Genres";
 import circleRating from "../../../components/circleRating/circlerating.jsx";
 import Img from "../../../components/lazyLoadImage/img.jsx";
 import PosterFallback from "../../../assets/no-poster.png";
+import CircleRating from "../../../components/circleRating/circlerating.jsx";
 
 const DetailsBanner = ({ video, crew }) => {
   const { mediaType, id } = useParams();
   const { data, loading } = useFetch(`/${mediaType}/${id}`);
+
+  const { url } = useSelector((state) => state.home);
+  const _genres = data?.genres?.map((g) => g.id);
 
   const toHoursAndMinutes = (totalMinutes) => {
     const hours = Math.floor(totalMinutes / 60);
@@ -24,9 +28,50 @@ const DetailsBanner = ({ video, crew }) => {
 
   return (
     <div className="detailsBanner">
-      <h1>Riyaaaaa</h1>
+      {/* <h1>Riyaaaaa</h1> */}
       {!loading ? (
-        <div>Details Content...</div>
+        <>
+          {!!data && (
+            <React.Fragment>
+              <div className="backdrop-img">
+                <Img src={url.backdrop + data?.backdrop_path} />
+              </div>
+              <div className="opacity-layer"></div>
+              <ContentWrapper>
+                <div className="content">
+                  <div className="left">
+                    {data.poster_path ? (
+                      <Img
+                        className="posterImg"
+                        src={url.backdrop + data.poster_path}
+                      />
+                    ) : (
+                      <Img className="posterImg" src={PosterFallback} />
+                    )}
+                  </div>
+                  <div className="right">
+                    <div className="title">
+                      {`${data.name || data.title} (${dayjs(
+                        data?.release_date
+                      ).format("YYYY")})`}
+                    </div>
+                  </div>
+                  <div className="subtitle">{data.tagline}</div>
+
+                  <Genres data={_genres} />
+
+                  <div className="row">
+                    <CircleRating rating={data.vote_average.toFixed(1)} />
+                    <div className="playbtn" onClick={() => {}}>
+                      <PlayIcon />
+                      <span className="text">Watch Trailer</span>
+                    </div>
+                  </div>
+                </div>
+              </ContentWrapper>
+            </React.Fragment>
+          )}
+        </>
       ) : (
         <div className="detailsBannerSkeleton">
           <ContentWrapper>
