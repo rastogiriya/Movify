@@ -9,12 +9,12 @@ import ContentWrapper from "../../../components/contentWrapper/ContentWrapper";
 import useFetch from "../../../hooks/useFetch";
 import Genres from "../../../components/genres/Genres";
 import circleRating from "../../../components/circleRating/circlerating.jsx";
-import Img from "../../../components/lazyLoadImage/Img.jsx";
+import Img from "../../../components/lazyLoadImage/img.jsx";
 import PosterFallback from "../../../assets/no-poster.png";
 
 const DetailsBanner = ({ video, crew }) => {
   const { mediaType, id } = useParams();
-  const { data, loading } = useFetch(`/${mediaType}/{id}`);
+  const { data, loading } = useFetch(`/${mediaType}/${id}`);
 
   const toHoursAndMinutes = (totalMinutes) => {
     const hours = Math.floor(totalMinutes / 60);
@@ -28,8 +28,8 @@ const DetailsBanner = ({ video, crew }) => {
         <div>Details Content...</div>
       ) : (
         <div className="detailsBannerSkeleton">
-          <h1>Riyaaaaa</h1>
-          {/* <ContentWrapper>
+          {/* <h1>Riyaaaaa</h1> */}
+          <ContentWrapper>
             <div className="left skeleton"></div>
             <div className="right">
               <div className="row skeleton"></div>
@@ -40,7 +40,7 @@ const DetailsBanner = ({ video, crew }) => {
               <div className="row skeleton"></div>
               <div className="row skeleton"></div>
             </div>
-          </ContentWrapper> */}
+          </ContentWrapper>
         </div>
       )}
     </div>
