@@ -15,7 +15,7 @@ const Details = () => {
   return (
     <div>
       {/* <h1>riyaaaaaaaaaa</h1> */}
-      <DetailsBanner video={data?.result?.[0]} crew={credits?.crew} />
+      <DetailsBanner video={data?.results?.[0]} crew={credits?.crew} />
       <Cast data={credits?.cast} loading={creditsLoading} />
     </div>
   );
