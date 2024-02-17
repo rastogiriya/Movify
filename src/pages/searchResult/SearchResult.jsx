@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 import "./style.scss";
 import { fetchDataFromApi } from "../../utils/api";
-import ContentWrapper from "../../components/contentWrapper/ContentWrapper";
-import MovieCard from "../../components/movieCard/MovieCard";
-import Spinner from "../../components/spinner/Spinner";
+import ContentWrapper from "../../components/contentWrapper/ContentWrapper.jsx";
+import MovieCard from "../../components/movieCard/MovieCard.jsx";
+import Spinner from "../../components/spinner/Spinner.jsx";
 import noResults from "../../assets/no-results.png";
 
 const SearchResult = () => {

@@ -2,11 +2,11 @@ import React from "react";
 import useFetch from "../../hooks/useFetch";
 import { useParams } from "react-router-dom";
 import "./style.scss";
-import DetailsBanner from "./detailsBanner/DetailsBanner";
-import Cast from "./cast/Cast";
-import VideosSection from "./videosSection/videosSection";
+import DetailsBanner from "./detailsBanner/DetailsBanner.jsx";
+import Cast from "./cast/Cast.jsx";
+import VideosSection from "./videosSection/VideosSection.jsx";
 import Similar from "./carousels/Similar";
-import Recommendations from "./carousels/Recommendations";
+import Recommendations from "./carousels/Recommendations.jsx";
 
 const Details = () => {
   const { mediaType, id } = useParams();

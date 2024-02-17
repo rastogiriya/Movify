@@ -2,7 +2,7 @@
 
 import React from "react";
 
-import Carousel from "../../../components/carousel/Carousel";
+import Carousel from "../../../components/carousel/Carousel.jsx";
 import useFetch from "../../../hooks/useFetch";
 
 const Recommendations = ({ mediaType, id }) => {
