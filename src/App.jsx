@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { fetchDataFromApi } from "./utils/api.js";
 import { useSelector, useDispatch } from "react-redux";
@@ -9,7 +9,7 @@ import Home from "./pages/home/Home.jsx";
 import Details from "./pages/details/Details.jsx";
 import SearchResult from "./pages/searchResult/SearchResult.jsx";
 import Explore from "./pages/explore/Explore.jsx";
-import PageNotFound from "./pages/404/PageNotFound.jsx";
+import PageNotFound from "./pages/notfound/PageNotFound.js";
 
 function App() {
   const dispatch = useDispatch();
