@@ -9,7 +9,7 @@ import Home from "./pages/home/Home.jsx";
 import Details from "./pages/details/Details.jsx";
 import SearchResult from "./pages/searchResult/SearchResult.jsx";
 import Explore from "./pages/explore/Explore.jsx";
-import PageNotFound from "./pages/404/pageNotFound.jsx";
+import PageNotFound from "./pages/404/PageNotFound.jsx";
 
 function App() {
   const dispatch = useDispatch();
