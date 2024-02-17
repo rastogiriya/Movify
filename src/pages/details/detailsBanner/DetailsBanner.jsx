@@ -10,7 +10,7 @@ import useFetch from "../../../hooks/useFetch";
 import Genres from "../../../components/genres/Genres";
 import Img from "../../../components/lazyLoadImage/Img.jsx";
 import PosterFallback from "../../../assets/no-poster.png";
-import CircleRating from "../../../components/circleRating/CircleRating.jsx";
+import CircleRating from "../../../components/circlerating/CircleRating.jsx";
 import ContentWrapper from "../../../components/contentWrapper/ContentWrapper.jsx";
 
 const DetailsBanner = ({ video, crew }) => {
