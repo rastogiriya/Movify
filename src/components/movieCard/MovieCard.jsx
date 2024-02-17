@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 
 import "./style.scss";
 import Img from "../lazyLoadImage/Img.jsx";
-import CircleRating from "../circleratingg/CircleRating.js";
+import CircleRating from "../circleratingg/CircleRating.jsx";
 import Genres from "../genres/Genres";
 import PosterFallback from "../../assets/no-poster.png";
 
