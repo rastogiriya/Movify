@@ -5,7 +5,7 @@ import "./style.scss";
 import DetailsBanner from "./detailsBanner/DetailsBanner.jsx";
 import Cast from "./cast/Cast.jsx";
 // import VideosSection from "./videosSection/VideosSection.jsx";
-import VideosSection from "./videosSection/VideosSection.jsx";
+import VideosSection from "./videoSection/VideosSection.js";
 import Similar from "./carousels/Similar";
 import Recommendations from "./carousels/Recommendations.jsx";
 
