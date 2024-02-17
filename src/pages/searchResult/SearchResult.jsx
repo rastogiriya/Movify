@@ -16,7 +16,7 @@ const SearchResult = () => {
 
   const fetchInitialData = () => {
     setLoading(true);
-    fetchDataFromApi(`/search/multi?query=${query}$page=${pageNum}`).then(
+    fetchDataFromApi(`/search/multi?query=${query}&page=${pageNum}`).then(
       (res) => {
         setData(res);
         setPageNum((prev) => prev + 1);
